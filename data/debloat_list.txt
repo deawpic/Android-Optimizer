@@ -1,0 +1,169 @@
+# ==============================================================================
+# Universal Android Debloater (UAD) Next-Gen Multi-OEM Master Database
+# Target: User 0 (pm uninstall -k --user 0 <pkg>)
+# Taxonomy:
+#   [RECOMMENDED] : Telemetry, adware, OEM feedback, junk bloatware (Safe for all users)
+#   [ADVANCED]    : Duplicate OEM ecosystem apps (Notes, Cloud Sync, Game Center, Store)
+#   [EXPERT]      : Carrier services, TTS engines, Print Spooler (Requires confirmation)
+# ==============================================================================
+
+# ==============================================================================
+# 1. Google / AOSP Analytics, Telemetry & Non-Essential Services [RECOMMENDED]
+# ==============================================================================
+com.google.android.feedback
+com.google.android.printservice.recommendation
+com.android.bookmarkprovider
+com.android.egg
+com.facebook.katana
+com.facebook.system
+com.facebook.appmanager
+com.facebook.services
+com.google.android.apps.tips
+com.google.android.partnersetup
+com.google.android.marvin.talkback
+com.google.audio.hearing.visualization.accessibility.scribe
+com.google.android.projection.gearhead
+
+# ==============================================================================
+# 2. Samsung (One UI 5 / 6 / 7) [RECOMMENDED & ADVANCED]
+# ==============================================================================
+# --- Telemetry & Analytics ---
+com.samsung.android.discovery
+com.samsung.android.rubin.app
+com.samsung.android.kidsinstaller
+com.samsung.android.app.tips
+com.samsung.android.app.spage
+com.samsung.android.visionintelligence
+com.samsung.android.ipsgeofence
+com.samsung.android.service.livedrawing
+com.samsung.android.mapsagent
+com.samsung.android.dynamiclock
+# --- Bixby Suite ---
+com.samsung.android.bixby.agent
+com.samsung.android.bixby.service
+com.samsung.android.bixby.wakeup
+com.samsung.android.bixbyvision.framework
+# --- Gaming & Store Bloat ---
+com.samsung.android.game.gamehome
+com.samsung.android.game.gametools
+com.samsung.android.game.gos
+com.sec.android.app.sbrowser
+com.sec.android.app.samsungapps
+com.samsung.android.allshare.service.mediashare
+# --- AR & Stickers ---
+com.samsung.android.aremoji
+com.samsung.android.arzone
+com.samsung.android.livestickers
+
+# ==============================================================================
+# 3. Xiaomi / Redmi / POCO (MIUI 14 / HyperOS) [RECOMMENDED & ADVANCED]
+# ==============================================================================
+# --- Telemetry, Ads & Tracking ---
+com.miui.analytics
+com.miui.msa.global
+com.miui.bugreport
+com.miui.yellowpage
+com.miui.daemon
+com.miui.hybrid
+com.miui.hybrid.accessory
+com.xiaomi.joyose
+com.xiaomi.mipicks
+com.xiaomi.glgm
+com.xiaomi.payment
+com.miui.cleanmaster
+# --- OEM Redundant Apps ---
+com.miui.videoplayer
+com.miui.player
+com.android.browser
+com.miui.translation.kingsoft
+com.miui.compass
+com.miui.notes
+com.miui.weather2
+com.miui.micloudsync
+com.xiaomi.midrop
+com.miui.cloudservice
+
+# ==============================================================================
+# 4. Oppo / Realme / OnePlus (ColorOS 13/14, Realme UI 4/5, OxygenOS) [RECOMMENDED]
+# ==============================================================================
+# --- HeyTap Telemetry & Tracking ---
+com.heytap.mcs
+com.heytap.openid
+com.heytap.browser
+com.heytap.market
+com.heytap.usercenter
+com.heytap.cloud
+com.heytap.pictorial
+# --- NearMe & Daemon ---
+com.nearme.atlas
+com.nearme.statistics.rom
+com.daemon.shelper
+com.oplus.trafficmonitor
+com.oplus.cdo.client
+com.oplus.games
+com.coloros.gamespace
+com.coloros.gamespaceui
+com.coloros.oppomultiapp
+com.oppo.market
+com.oppo.quicksearchbox
+com.oppo.music
+com.oppo.operationManual
+
+# ==============================================================================
+# 5. Vivo / iQOO (Funtouch OS 13/14, OriginOS 3/4) [RECOMMENDED]
+# ==============================================================================
+com.vivo.appstore
+com.vivo.browser
+com.vivo.game
+com.bbk.theme
+com.vivo.favorite
+com.vivo.globalsearch
+com.vivo.pushservice
+com.vivo.hiboard
+com.vivo.unionpay
+com.iqoo.secure
+com.vivo.magazine
+com.vivo.easyshare
+com.vivo.carmode
+com.vivo.gamewatch
+com.vivo.livewallpaper.coralsea
+com.vivo.tips
+
+# ==============================================================================
+# 6. Huawei / Honor (EMUI 12/13, MagicOS 7/8) [RECOMMENDED]
+# ==============================================================================
+com.huawei.browser
+com.huawei.appmarket
+com.huawei.himovie.overseas
+com.huawei.gamebox
+com.huawei.hifolder
+com.huawei.hwstartupguide
+com.huawei.hicloud
+com.huawei.skytone
+com.hihonor.appmarket
+com.hihonor.magichome
+com.hihonor.cloudmusic
+com.hihonor.videoplayer
+
+# ==============================================================================
+# 7. Motorola / Lenovo (MyUX) [RECOMMENDED]
+# ==============================================================================
+com.motorola.ccc.notification
+com.motorola.help
+com.motorola.motosignature.app
+com.motorola.gamemode
+com.lenovo.browser
+com.lenovo.lsf.user
+
+# ==============================================================================
+# 8. Transsion (Tecno / Infinix / Itel - HiOS / XOS / itelOS) [RECOMMENDED]
+# ==============================================================================
+com.transsion.palmstore
+com.transsion.magicshow
+com.transsion.ahagames
+com.transsion.sk
+com.transsion.phonemaster
+com.transsion.carlcare
+com.transsion.insnet
+com.transsion.boomplay
+com.transsion.vskit

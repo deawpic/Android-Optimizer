@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "android-optimizer-harness"
+version = "2.1.0"
+description = "Production-grade AI Agent Harness and benchmark testbed for non-destructive Android system optimization and kernel profiling."
+readme = "README.md"
+authors = [{ name = "Android Optimizer Harness Architects" }]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "mypy>=1.0.0"
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]

@@ -1,0 +1,6 @@
+id=kernel_gpu_thermal_optimizer
+name=Kernel, GPU & Thermal Performance Optimizer
+version=v2.5.0
+versionCode=2500
+author=AgentOptimizer
+description=Universal boot-time optimizer for CPU Governors, Adreno/Mali GPU, Thermal Throttling mitigation, I/O Schedulers, ZRAM (lz4), and VM tuning.

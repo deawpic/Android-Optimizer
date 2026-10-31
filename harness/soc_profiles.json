@@ -1,0 +1,118 @@
+{
+  "soc_database": [
+    {
+      "soc_id": "snapdragon_8_gen_3",
+      "commercial_name": "Qualcomm Snapdragon 8 Gen 3",
+      "platform_codes": ["sm8650", "pineapple", "qcom,sm8650"],
+      "vendor": "Qualcomm",
+      "cpu_architecture": {
+        "clusters": [
+          {"name": "Silver (Efficiency)", "cores": [0, 1], "arch": "Cortex-A520", "policy_path": "/sys/devices/system/cpu/cpufreq/policy0", "up_rate_us": 1000, "down_rate_us": 20000},
+          {"name": "Gold (Performance)", "cores": [2, 3, 4, 5, 6], "arch": "Cortex-A720", "policy_path": "/sys/devices/system/cpu/cpufreq/policy2", "up_rate_us": 500, "down_rate_us": 20000},
+          {"name": "Prime (Ultra-High)", "cores": [7], "arch": "Cortex-X4", "policy_path": "/sys/devices/system/cpu/cpufreq/policy7", "up_rate_us": 500, "down_rate_us": 20000}
+        ],
+        "default_governor": "schedutil"
+      },
+      "gpu_architecture": {
+        "family": "Adreno",
+        "model": "Adreno 750",
+        "sysfs_root": "/sys/class/kgsl/kgsl-3d0",
+        "governor": "msm-adreno-tz",
+        "bus_split": 1,
+        "force_bus_on": 1,
+        "idle_timer_ms": 90,
+        "thermal_pwrlevel": 0
+      },
+      "memory_tuning": {
+        "zram_algorithm": "lz4",
+        "zram_disksize_ratio": 0.5,
+        "swappiness": 100,
+        "page_cluster": 0
+      }
+    },
+    {
+      "soc_id": "snapdragon_8_gen_2",
+      "commercial_name": "Qualcomm Snapdragon 8 Gen 2",
+      "platform_codes": ["sm8550", "kalama", "qcom,sm8550"],
+      "vendor": "Qualcomm",
+      "cpu_architecture": {
+        "clusters": [
+          {"name": "Silver (Efficiency)", "cores": [0, 1, 2], "arch": "Cortex-A510", "policy_path": "/sys/devices/system/cpu/cpufreq/policy0", "up_rate_us": 1000, "down_rate_us": 20000},
+          {"name": "Gold (Performance)", "cores": [3, 4, 5, 6], "arch": "Cortex-A715/A710", "policy_path": "/sys/devices/system/cpu/cpufreq/policy3", "up_rate_us": 500, "down_rate_us": 20000},
+          {"name": "Prime (Ultra-High)", "cores": [7], "arch": "Cortex-X3", "policy_path": "/sys/devices/system/cpu/cpufreq/policy7", "up_rate_us": 500, "down_rate_us": 20000}
+        ],
+        "default_governor": "schedutil"
+      },
+      "gpu_architecture": {
+        "family": "Adreno",
+        "model": "Adreno 740",
+        "sysfs_root": "/sys/class/kgsl/kgsl-3d0",
+        "governor": "msm-adreno-tz",
+        "bus_split": 1,
+        "force_bus_on": 1,
+        "idle_timer_ms": 80,
+        "thermal_pwrlevel": 0
+      },
+      "memory_tuning": {
+        "zram_algorithm": "lz4",
+        "zram_disksize_ratio": 0.5,
+        "swappiness": 100,
+        "page_cluster": 0
+      }
+    },
+    {
+      "soc_id": "mediatek_dimensity_9300",
+      "commercial_name": "MediaTek Dimensity 9300 / 9300+",
+      "platform_codes": ["mt6989", "dimensity9300", "k6989v1"],
+      "vendor": "MediaTek",
+      "cpu_architecture": {
+        "clusters": [
+          {"name": "Mid-Performance", "cores": [0, 1, 2, 3], "arch": "Cortex-A720", "policy_path": "/sys/devices/system/cpu/cpufreq/policy0", "up_rate_us": 800, "down_rate_us": 20000},
+          {"name": "High-Performance", "cores": [4, 5, 6], "arch": "Cortex-X4", "policy_path": "/sys/devices/system/cpu/cpufreq/policy4", "up_rate_us": 500, "down_rate_us": 20000},
+          {"name": "Peak-Prime", "cores": [7], "arch": "Cortex-X4 Prime", "policy_path": "/sys/devices/system/cpu/cpufreq/policy7", "up_rate_us": 500, "down_rate_us": 20000}
+        ],
+        "default_governor": "schedutil"
+      },
+      "gpu_architecture": {
+        "family": "Mali Immortalis",
+        "model": "Immortalis-G720 MC12",
+        "sysfs_root": "/sys/devices/platform/13000000.mali",
+        "governor": "simple_ondemand",
+        "dvfs_enable": 1
+      },
+      "memory_tuning": {
+        "zram_algorithm": "lz4",
+        "zram_disksize_ratio": 0.5,
+        "swappiness": 100,
+        "page_cluster": 0
+      }
+    },
+    {
+      "soc_id": "google_tensor_g3",
+      "commercial_name": "Google Tensor G3",
+      "platform_codes": ["zuma", "tensor_g3", "s5e9935"],
+      "vendor": "Google / Samsung",
+      "cpu_architecture": {
+        "clusters": [
+          {"name": "Little", "cores": [0, 1, 2, 3], "arch": "Cortex-A510", "policy_path": "/sys/devices/system/cpu/cpufreq/policy0", "up_rate_us": 1000, "down_rate_us": 20000},
+          {"name": "Mid", "cores": [4, 5, 6, 7], "arch": "Cortex-A715", "policy_path": "/sys/devices/system/cpu/cpufreq/policy4", "up_rate_us": 500, "down_rate_us": 20000},
+          {"name": "Big", "cores": [8], "arch": "Cortex-X3", "policy_path": "/sys/devices/system/cpu/cpufreq/policy8", "up_rate_us": 500, "down_rate_us": 20000}
+        ],
+        "default_governor": "schedutil"
+      },
+      "gpu_architecture": {
+        "family": "Mali",
+        "model": "Mali-G715 MP10",
+        "sysfs_root": "/sys/devices/platform/1c500000.mali",
+        "governor": "simple_ondemand",
+        "dvfs_enable": 1
+      },
+      "memory_tuning": {
+        "zram_algorithm": "lz4",
+        "zram_disksize_ratio": 0.5,
+        "swappiness": 100,
+        "page_cluster": 0
+      }
+    }
+  ]
+}

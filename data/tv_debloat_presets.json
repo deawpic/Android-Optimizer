@@ -1,0 +1,118 @@
+{
+  "project_reference": "https://github.com/Gathin23/cleanyourtv",
+  "methodology": "pm disable-user --user 0",
+  "reversibility": "pm enable <package>",
+  "supported_launchers": [
+    {
+      "package": "com.gathin.tvhome",
+      "name": "CleanYourTV Minimalist Launcher",
+      "style": "Apple TV Minimal"
+    },
+    {
+      "package": "com.spocky.projectivy",
+      "name": "Projectivy Launcher",
+      "style": "Highly Customizable Leanback"
+    },
+    {
+      "package": "me.efdev.flauncher",
+      "name": "FLauncher",
+      "style": "Open Source Flutter Leanback"
+    },
+    {
+      "package": "ca.dstudio.atvlauncher.pro",
+      "name": "ATV Launcher Pro",
+      "style": "Grid Layout"
+    },
+    {
+      "package": "com.princecreations.emulauncher",
+      "name": "Primal TV Launcher",
+      "style": "Simple Tiles"
+    }
+  ],
+  "protected_critical_tv_packages": [
+    "com.google.android.tungsten.bluetooth",
+    "com.android.bluetooth",
+    "com.google.android.tv.remote.service",
+    "com.android.systemui",
+    "com.android.settings",
+    "com.google.android.inputmethod.latin",
+    "com.android.vending",
+    "com.google.android.packageinstaller",
+    "com.android.packageinstaller",
+    "com.google.android.ext.services",
+    "com.google.android.ext.shared"
+  ],
+  "tv_presets": {
+    "google_tv": {
+      "vendor": "Google",
+      "description": "Chromecast with Google TV (4K/HD), Google TV Streamer, and generic Google TV interfaces",
+      "stock_launcher": "com.google.android.apps.tv.launcherx",
+      "setup_wizard": "com.google.android.tungsten.setupwraith",
+      "packages": [
+        "com.google.android.tvrecommendations",
+        "com.google.android.tv.homescreenchannels",
+        "com.google.android.videos",
+        "com.google.android.play.games",
+        "com.google.android.feedback",
+        "com.google.android.youtube.tvunplugged"
+      ]
+    },
+    "xiaomi_mitv": {
+      "vendor": "Xiaomi",
+      "description": "Xiaomi Mi TV, TV Stick, TV Box S with PatchWall interface",
+      "stock_launcher": "com.mitv.tvhome",
+      "setup_wizard": "com.xiaomi.mitv.upgrade",
+      "packages": [
+        "com.xiaomi.mitv.advert",
+        "com.xiaomi.mitv.banner",
+        "com.xiaomi.mitv.tvpush.tvpushservice",
+        "com.xiaomi.mitv.shop",
+        "com.xiaomi.devicelist",
+        "com.xiaomi.mitv.pay",
+        "com.xiaomi.mitv.handbook",
+        "com.xiaomi.mitv.care",
+        "com.mi.health"
+      ]
+    },
+    "tcl_tv": {
+      "vendor": "TCL",
+      "description": "TCL Android TV and Google TV with TCL Home / Waterfall ads",
+      "stock_launcher": "com.tcl.waterfall.overseas",
+      "setup_wizard": "com.tcl.partnercustomizer",
+      "packages": [
+        "com.tcl.guard",
+        "com.tcl.browser",
+        "com.tcl.channel",
+        "com.tcl.useragreement",
+        "com.tcl.messagebox",
+        "com.tcl.tvmanager",
+        "com.tcl.videoplayer"
+      ]
+    },
+    "sony_bravia": {
+      "vendor": "Sony",
+      "description": "Sony Bravia Android TV with Bravia recommendations and promotions",
+      "stock_launcher": "com.google.android.tv.launcher",
+      "setup_wizard": "com.sony.dtv.smarthelp",
+      "packages": [
+        "com.sony.dtv.bravialifehack",
+        "com.sony.dtv.braviacontentservice",
+        "com.sony.dtv.demomode",
+        "com.sony.dtv.recommendations",
+        "com.sony.dtv.promotions",
+        "com.sony.dtv.sonyselect"
+      ]
+    },
+    "hisense_tv": {
+      "vendor": "Hisense",
+      "description": "Hisense Android TV / VIDAA telemetry services",
+      "stock_launcher": "com.google.android.tv.launcher",
+      "setup_wizard": "com.hisense.service.smarthome",
+      "packages": [
+        "com.hisense.hitv.hicloud.account",
+        "com.jamdeo.tv.vod",
+        "com.hisense.tv.service"
+      ]
+    }
+  }
+}

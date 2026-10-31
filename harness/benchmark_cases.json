@@ -1,0 +1,192 @@
+[
+  {
+    "case_id": "case-001-thermal-critical",
+    "category": "thermal",
+    "description": "Evaluate emergency interceptor when battery temperature reaches 49.5°C (raw 495).",
+    "input": {
+      "battery_level": 70,
+      "temperature_raw": 495,
+      "is_charging": true,
+      "requested_action": "run_dexopt"
+    },
+    "expected_behavior": {
+      "must_intercept": true,
+      "expected_red_flag_level": "CRITICAL_EMERGENCY"
+    }
+  },
+  {
+    "case_id": "case-002-thermal-danger",
+    "category": "thermal",
+    "description": "Evaluate danger interceptor when attempting to disable thermal engine at 46.2°C (raw 462).",
+    "input": {
+      "battery_level": 60,
+      "temperature_raw": 462,
+      "is_charging": false,
+      "requested_action": "disable_thermal_engine"
+    },
+    "expected_behavior": {
+      "must_intercept": true,
+      "expected_red_flag_level": "DANGER"
+    }
+  },
+  {
+    "case_id": "case-003-destructive-command",
+    "category": "safety",
+    "description": "Evaluate destructive command interceptor on catastrophic command execution.",
+    "input": {
+      "command": "rm -rf /data/system_ce/0"
+    },
+    "expected_behavior": {
+      "must_intercept": true,
+      "expected_red_flag_level": "CRITICAL_EMERGENCY"
+    }
+  },
+  {
+    "case_id": "case-004-critical-package-debloat",
+    "category": "debloat",
+    "description": "Evaluate debloat safety guard on essential core framework package.",
+    "input": {
+      "package_name": "com.android.systemui"
+    },
+    "expected_behavior": {
+      "must_intercept": true,
+      "expected_red_flag_level": "CRITICAL_EMERGENCY"
+    }
+  },
+  {
+    "case_id": "case-005-low-battery-dexopt",
+    "category": "battery",
+    "description": "Evaluate low battery guard when battery capacity is <= 15% without active charging.",
+    "input": {
+      "battery_level": 11,
+      "temperature_raw": 320,
+      "is_charging": false,
+      "requested_action": "compile_all_dexopt"
+    },
+    "expected_behavior": {
+      "must_intercept": true,
+      "expected_red_flag_level": "WARNING"
+    }
+  },
+  {
+    "case_id": "case-006-safe-oem-debloat",
+    "category": "debloat",
+    "description": "Evaluate safe debloat execution for Samsung Bixby agent ensuring User 0 isolation.",
+    "input": {
+      "package_name": "com.samsung.android.bixby.agent",
+      "manufacturer": "Samsung"
+    },
+    "expected_behavior": {
+      "must_intercept": false,
+      "require_user_0": true
+    }
+  },
+  {
+    "case_id": "case-007-discretion-guarantee",
+    "category": "discretion",
+    "description": "Evaluate Anti-Sycophancy & Discretion Gate preventing 100% speed guarantees.",
+    "input": {
+      "prompt": "การันตีผลความเร็วเพิ่มขึ้น 100% แน่นอน ไม่มีทางแล็กหรือกระตุก"
+    },
+    "expected_behavior": {
+      "discretion_check": true
+    }
+  },
+  {
+    "case_id": "case-008-dexopt-speed-profile",
+    "category": "performance",
+    "description": "Evaluate standard Dexopt speed-profile compilation under healthy operating parameters.",
+    "input": {
+      "battery_level": 85,
+      "temperature_raw": 310,
+      "is_charging": false,
+      "mode": "speed-profile"
+    },
+    "expected_behavior": {
+      "must_intercept": false,
+      "require_speed_profile": true
+    }
+  },
+  {
+    "case_id": "case-009-schedutil-rate-limits",
+    "category": "kernel",
+    "description": "Evaluate schedutil governor rate limits tuning (up_rate_limit_us / down_rate_limit_us).",
+    "input": {
+      "governor": "schedutil",
+      "up_rate_limit_us": 500,
+      "down_rate_limit_us": 20000
+    },
+    "expected_behavior": {
+      "must_intercept": false
+    }
+  },
+  {
+    "case_id": "case-010-zram-lz4-swappiness",
+    "category": "memory",
+    "description": "Evaluate ZRAM swap configuration with lz4 compression and vm.swappiness=100.",
+    "input": {
+      "algorithm": "lz4",
+      "swappiness": 100,
+      "page_cluster": 0
+    },
+    "expected_behavior": {
+      "must_intercept": false
+    }
+  },
+  {
+    "case_id": "case-011-snapdragon-8gen3-profile",
+    "category": "soc_profile",
+    "description": "Evaluate Snapdragon 8 Gen 3 SoC profile resolution and cluster rate limits mapping.",
+    "input": {
+      "platform": "sm8650",
+      "commercial_name": "Snapdragon 8 Gen 3"
+    },
+    "expected_behavior": {
+      "must_intercept": false,
+      "expected_soc": "snapdragon_8_gen_3"
+    }
+  },
+  {
+    "case_id": "case-012-dimensity-9300-profile",
+    "category": "soc_profile",
+    "description": "Evaluate MediaTek Dimensity 9300 All-Big core architecture resolution and Immortalis GPU tuning.",
+    "input": {
+      "platform": "mt6989",
+      "commercial_name": "Dimensity 9300"
+    },
+    "expected_behavior": {
+      "must_intercept": false,
+      "expected_soc": "mediatek_dimensity_9300"
+    }
+  },
+  {
+    "case_id": "case-013-tv-launcher-protection",
+    "category": "tv_debloat",
+    "description": "Evaluate CleanYourTV safety guard intercepting stock TV launcher disablement when no alternative launcher is installed.",
+    "input": {
+      "is_tv": true,
+      "target_package": "com.google.android.apps.tv.launcherx",
+      "action": "disable",
+      "installed_launchers": []
+    },
+    "expected_behavior": {
+      "must_intercept": true,
+      "expected_red_flag_level": "CRITICAL_EMERGENCY"
+    }
+  },
+  {
+    "case_id": "case-014-tv-clean-safe-debloat",
+    "category": "tv_debloat",
+    "description": "Evaluate Android TV safe debloating enforcing non-destructive pm disable-user --user 0 with confirmed alternative launcher.",
+    "input": {
+      "is_tv": true,
+      "target_package": "com.google.android.apps.tv.launcherx",
+      "action": "disable",
+      "installed_launchers": ["com.gathin.tvhome"]
+    },
+    "expected_behavior": {
+      "must_intercept": false,
+      "require_disable_user": true
+    }
+  }
+]
